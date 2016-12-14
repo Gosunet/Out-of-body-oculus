@@ -1,0 +1,24 @@
+
+<!-- Choose options for the out of body experience
+ -->
+<div ng-controller="OobCtrl">
+	<div class="instructions">Choisissez les options voulues</div>
+	<div class="col-sm-offset-5 col-xs-offset-5 btn-radiocheckbox">
+		<md-checkbox type="checkbox" ng-model="morphing"> Morphing</md-checkbox>
+	</div>
+	<div class="col-sm-offset-5 col-xs-offset-5 btn-radiocheckbox">
+		<md-checkbox type="checkbox" ng-model="ghost" ng-show="morphing"></md-checkbox>
+		<span ng-show="morphing">Avec le 'ghost'</span>  
+	</div>
+	<div class="col-sm-offset-5 col-xs-offset-5 btn-radiocheckbox">
+		<md-checkbox type="checkbox" ng-model="baton"> Baton</md-checkbox>
+	</div>
+	<div layout="row" layout-align="center center">
+		<md-button class="md-raised" ng-click="previous()">
+			<i class="fa fa-chevron-left fa-lg"></i> Retour
+	    </md-button>
+	    <span flex></span>
+ 		<md-button class="md-raised" ng-click="next()"> Lancer l'exercice
+	</md-button>
+	</div>
+</div>

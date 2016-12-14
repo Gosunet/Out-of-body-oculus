@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<!-- Part html for the selection of the avatar' sex for the patient's choice -->
+
+<section  ng-controller="AvatarCtrl">
+	<div class="instructions">Choisissez le sexe de l'avatar</div>
+	<md-radio-group>
+	<div class="radio btn-radiocheckbox col-sm-offset-5 col-xs-offset-5">
+		<md-radio-button name="sexe" id="F" value="option1" ng-click='sexe_selected("F")'>Femme</md-radio-button>
+	</div>
+	<div class="radio btn-radiocheckbox col-sm-offset-5 col-xs-offset-5">
+		<md-radio-button name="sexe" id="M" ng-click='sexe_selected("M")'>Homme</md-radio-button>
+	</div>
+	<md-radio-group>
+	<div layout="row" layout-align="center center">
+		<md-button class="md-raised" ng-click="previous()">
+			<i class="fa fa-chevron-left fa-lg"></i> Retour
+	    </md-button>
+	    <span flex></span>
+ 		<md-button class="md-raised" ng-click="next()">
+			<i class="fa fa-chevron-right fa-lg"></i> Lancer le choix
+	</md-button>
+	</div>
+</section>

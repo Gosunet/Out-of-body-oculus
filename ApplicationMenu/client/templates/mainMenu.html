@@ -1,0 +1,56 @@
+<!-- Part html for the main menu
+ -->
+
+<!--  ui-sref refers to a state defined in controllerMenuWeb (angular-ui-router librairy)
+ -->
+<div ng-controller="mainMenuCtrl" ng-cloak layout-margin>
+   
+    <md-grid-list
+        md-cols ="2" md-row-height="4:2.5"
+        md-gutter="12px" md-gutter-gt-sm="8px" md-row-height-gt-md="16:6">
+    <md-grid-tile class="green" ui-sref="avatar">
+      <md-grid-tile-footer>
+        <h3>Choix de l'avatar</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile class="yellow" ui-sref="oob">
+      <md-grid-tile-footer>
+        <h3>Sortie de corps</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile class="blue" ui-sref="portes">
+      <md-grid-tile-footer>
+        <h3>Exercice des portes</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile class="red" ui-sref="humanoidesConfig">
+      <md-grid-tile-footer>
+        <h3>Exercice des humanoïdes</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+    
+
+<!--
+    <div class="btn_row row-centered">
+        <input type="button" value="Choix de l'avatar" ui-sref="avatar" class="btn btn_config col-sm-4 col-sm-offset-1 col-xs-4 btn_home"></input>
+        <input type="button" value="Sortie de Corps" ui-sref="oob" class="btn btn_config col-sm-4 col-sm-offset-1 col-xs-4 col-xs-4 btn_home"></input>
+        <input type="button" value="Exercice des portes" ui-sref="portes" class="btn btn_config col-sm-4 col-sm-offset-1 col-xs-4  btn_home"></input>
+        <input type="button" value="Exercice des humanoïdes" ui-sref="humanoidesConfig" class="btn btn_config col-sm-4 col-sm-offset-1 col-xs-4 btn_home"></input>
+    </div>
+-->
+    <md-button class="md-raised" ng-click="exit()">
+			<i class="fa fa-times"></i> Fermer l'application
+	</md-button>
+<!--
+    <div class="exit_row">
+        <a value="Fermer l'application" ng-click="exit()" class="btn btn-icon btn_config">
+            <i class="fa fa-times"></i> Fermer l'application
+        </a>
+    </div>
+-->
+
+</div>

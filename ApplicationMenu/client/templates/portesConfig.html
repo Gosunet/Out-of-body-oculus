@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- choose height, width and repetitions of doors 
+ -->
+<section ng-controller="PortesConfigCtrl">
+    <form name="formulaire" ng-submit='executer_click()' class="row-centered">
+
+        <!-- 		block for width's doors -->
+        <div class="col-sm-4 col-sm-offset-0 col-xs-11 col-xs-offset-0 inline-block-config">
+           <br>
+            <md-input-container>
+            <label>Nombre de largeurs de porte</label>
+            <input type="number" ng-pattern="/^[0-9]*$/" min="1" step="1" name="nbTailleLargeur" ng-model="nbTailleLargeur" class="number-input" />
+            </md-input-container>
+            <span ng-show="formulaire.nbTailleLargeur.$error.pattern">Not a valid number</span>
+            <br>
+            <div ng-show="nbTailleLargeur>1">
+               <md-input-container>
+                <label>Largeur minimum (en cm)</label>
+                <input type="number" ng-pattern="/^[0-9]*$/" min="0" step="1" name="largeurMin" ng-model="largeurMin" ng-change="largeurMinChanged()" class="number-input" ng-model-options="{debounce: 750}" />
+                </md-input-container>
+            </div>
+            <div ng-show="nbTailleLargeur>1">
+               <md-input-container>
+                <label>Largeur maximum (en cm)</label>
+                <input type="number" ng-pattern="/^[0-9]*$/" min="0" step="1" name="largeurMax" ng-model="largeurMax" class="number-input" ng-change="largeurMaxChanged()" ng-model-options="{debounce: 750}" />
+                </md-input-container>
+            </div>
+        </div>
+
+        <!-- 		block for height's doors -->
+        <div ng-show="hauteur" class="col-sm-4 col-sm-offset-0 col-xs-11 col-xs-offset-0 inline-block-config bordure">
+           <br>
+            <md-input-container>
+            <label>Hauteur minimum (en cm)</label>
+            <input type="number" ng-pattern="/^[0-9]*$/" min="1" step="1" name="nbTailleHauteur" ng-model="nbTailleHauteur" class="number-input" />
+            </md-input-container>
+            <span ng-show="formulaire.nbTailleHauteur.$error.pattern">Not a valid number</span>
+            <div ng-show="nbTailleHauteur>1">
+                <md-input-container>
+                <label>Hauteur minimum (en cm)</label>
+                <input type="number" ng-pattern="/^[0-9]*$/" min="0" step="1" name="hauteurMin" ng-model="hauteurMin" ng-change="hauteurMinChanged()" class="number-input" ng-model-options="{debounce: 750}" />
+                </md-input-container>
+            </div>
+            <div ng-show="nbTailleHauteur>1">
+               <md-input-container>
+                <label>Hauteur maximum (en cm)</label>
+                <input type="number" ng-pattern="/^[0-9]*$/" min="0" step="1" name="hauteurMax" ng-model="hauteurMax" class="number-input" ng-change="hauteurMaxChanged()" ng-model-options="{debounce: 750}" />
+                </md-input-container>
+            </div>
+        </div>
+
+        <!-- 		block for repetitions' doors -->
+        <div class="col-sm-3 col-sm-offset-0 col-xs-11 col-xs-offset-0 inline-block-config">
+          <br>
+           <md-input-container>
+            <label>Nombre de répétitions</label>
+            <input type="number" ng-pattern="/^[0-9]*$/" min="0" step="1" name="nbRepet" ng-model="nbRepet" class="number-input" />
+            </md-input-container>
+            <br>
+            <label>Total : {{nbEssai}} tests</label>
+            <span ng-show="formulaire.nbRepet.$error.pattern">Not a valid number</span>
+        </div>
+
+        <div class="warning-msg">{{informationsDonnees}}</div>
+        <div layout="row" layout-align="center center">
+		<md-button class="md-raised" ng-click="previous()">
+			<i class="fa fa-chevron-left fa-lg"></i> Retour
+	    </md-button>
+           <span flex></span>
+           <md-button class="md-raised" type="submit"> Lancer l'exercice
+        </div>
+    </form>
+</section>

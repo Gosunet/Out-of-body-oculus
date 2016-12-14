@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- choose width and repetitions 
+ -->
+<section ng-controller="HumanoidesConfigCtrl">
+    <form name="formulaire" ng-submit='executer_click()' class='row-centered'>
+
+        <!-- 		block for width's doors -->
+        <div class="col-sm-4 col-sm-offset-0 col-xs-11 col-xs-offset-0 inline-block-config">
+           <br>
+            <md-input-container>
+            <label>Nombre de passages</label>
+            <input type="number" ng-pattern="/^[0-9]*$/" min="1" step="1" name="nbIntervalle" ng-model="nbIntervalle" class="number-input" />
+            <span ng-show="formulaire.nbIntervalle.$error.pattern">Not a valid number</span>
+            </md-input-container>
+            <div ng-show="nbIntervalle>1">
+               <md-input-container>
+                <label>Minimum de l'intervalle (en cm)</label>
+                <input type="number" ng-pattern="/^[0-9]*$/" min="0" step="1" name="intervalleMin" ng-model="intervalleMin" ng-change="intervalleMinChanged()" class="number-input" ng-model-options="{debounce: 750}" />
+                </md-input-container>
+            </div>
+            <div ng-show="nbIntervalle>1">
+               <md-input-container>
+                <label>Maximum de l'intervalle (en cm)</label>
+                <input type="number" ng-pattern="/^[0-9]*$/" min="0" step="1" name="intervalleMax" ng-model="intervalleMax" class="number-input" ng-change="intervalleMaxChanged()" ng-model-options="{debounce: 750}" />
+                </md-input-container>
+            </div>
+        </div>
+        <!-- 		block for repetitions' doors -->
+        <div class="col-sm-3 col-sm-offset-0 col-xs-11 col-xs-offset-0 inline-block-config">
+          <br>
+          <md-input-container>
+          <label>Scale </label>
+            <input type="number" ng-pattern="/^[0.1-9.9]*$/" min="0" step="0.1" name="largeur" ng-model="largeur" class="number-input" />
+        </md-input-container>
+           <md-input-container>
+            <label>Nombre de répétitions</label>
+            <input type="number" ng-pattern="/^[0-9]*$/" min="0" step="1" name="nbRepet" ng-model="nbRepet" class="number-input" />
+            </md-input-container>
+            <br>
+            <label>Total : {{nbEssai}} tests</label>
+            <span ng-show="formulaire.nbRepet.$error.pattern">Not a valid number</span>
+            </div>
+        </div>
+        <div class="warning-msg">{{informationsDonnees}}</div>
+        <div layout="row" layout-align="center center">
+		<md-button class="md-raised" ng-click="previous()">
+			<i class="fa fa-chevron-left fa-lg"></i> Retour
+	    </md-button>
+           <span flex></span>
+           <md-button class="md-raised" type="submit"> Lancer l'exercice
+        </div>
+
+    </form>
+</section>

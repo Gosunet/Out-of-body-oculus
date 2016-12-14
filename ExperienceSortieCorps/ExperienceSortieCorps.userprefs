@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AssetsPerso\Scripts\Out Of Body\PositionBatonVive.cs">
+    <Files>
+      <File FileName="Assets\AssetsPerso\Scripts\Socket\ReceiveSocket.cs" Line="140" Column="1" />
+      <File FileName="Assets\AssetsPerso\Scripts\Out Of Body\InitModel.cs" Line="89" Column="52" />
+      <File FileName="Assets\AssetsPerso\Scripts\Out Of Body\MouvementHydra.cs" Line="76" Column="85" />
+      <File FileName="Assets\AssetsPerso\Scripts\Out Of Body\PositionBatonVive.cs" Line="35" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

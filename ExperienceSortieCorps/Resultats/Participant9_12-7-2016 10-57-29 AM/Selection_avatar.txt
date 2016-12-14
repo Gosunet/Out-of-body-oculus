@@ -1,0 +1,2 @@
+Date_Heure	Sexe	Choix patient			Choix experimentateur			Difference corpulence			Facteur de reduction
+12-7-2016 10-57-51 AM	HOMME	132.02	129.54	131.13	57.36	80.75	79.37	-56.55204	-37.66404	-39.47228	10

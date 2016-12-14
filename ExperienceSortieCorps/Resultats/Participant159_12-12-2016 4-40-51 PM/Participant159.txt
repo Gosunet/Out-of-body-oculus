@@ -1,0 +1,1 @@
+N° Exercice	N° Porte	Condition	Type de porte	Largeur de porte	Hauteur de porte	Reponse	Corpulence utilisateur			Corpulence docteur			Difference de corpulence			Temps de reponse

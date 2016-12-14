@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<!-- Part html for the factor's reduction of the avatar and patient avatar validation -->
+
+<section  ng-controller="AvatarMedecinCtrl">
+	<div class="instructions">Choisissez le facteur de réduction de l'avatar pour le morphing</div>
+	<div class="row-centered">
+        <md-input-container>
+			<input type="number" ng-pattern="/^[0-9]*$/" min="1" step="1" name="facteurAvatar" ng-init="facteurAvatar=1" ng-model="facteurAvatar" class="number-input"/>
+        </md-input-container>
+	</div>
+	<div class="warning-msg">Attendez que le patient ait fait son choix d'avatar pour valider</div>
+	<div layout="row" layout-align="center center">
+		<md-button class="md-raised" ng-click="previous()">
+			<i class="fa fa-chevron-left fa-lg"></i> Retour
+	    </md-button>
+	    <span flex></span>
+ 		<md-button class="md-raised" ng-click="next()">
+			<i class="fa fa-check fa-lg"></i> Valider les avatars
+	</md-button>
+	</div>
+</section>

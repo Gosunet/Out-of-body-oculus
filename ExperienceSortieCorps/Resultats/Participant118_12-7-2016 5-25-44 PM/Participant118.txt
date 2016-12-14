@@ -1,0 +1,5 @@
+N° Exercice	N° Porte	Condition	Type de porte	Largeur de porte	Hauteur de porte	Reponse	Corpulence utilisateur			Corpulence docteur			Difference de corpulence			Temps de reponse
+1	1	1	3	1.5	17	1	0	0	0	0	0	0	0	0	0	5.576
+1	2	1	3	1.5	17	1	0	0	0	0	0	0	0	0	0	68.381
+1	3	1	3	3.25	17	1	0	0	0	0	0	0	0	0	0	89.09
+1	4	1	3	3.25	17	1	0	0	0	0	0	0	0	0	0	17.034
