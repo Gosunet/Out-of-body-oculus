@@ -15,7 +15,7 @@ public class MouvementHydra : MonoBehaviour
     private GameObject _avatarPosition;
 
     // Sensitivity of the razer hydra.
-    private Vector3 _sensitivity = new Vector3(0.001f, 0.001f, 0.001f);
+    private Vector3 _sensitivity = new Vector3(0.008f, 0.008f, 0.008f);
     // Quaternion used to calculate hand's rotation
     private Quaternion m_initialRotation;
     // Vector used to calculate hand's position
@@ -56,8 +56,8 @@ public class MouvementHydra : MonoBehaviour
     void GetInitialPositionAvatar()
     {
         m_initialPosition = _avatarPosition.transform.localPosition;
-        m_initialPosition.y += 0.3f;
-        m_initialPosition.z -= 0.28f;
+        m_initialPosition.y += 9.1f;
+        m_initialPosition.z -= 4f;
     }
 
     /// <summary>
