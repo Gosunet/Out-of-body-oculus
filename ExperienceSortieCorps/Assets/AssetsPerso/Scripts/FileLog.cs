@@ -146,7 +146,7 @@ namespace ManageLog
                 modelDiffvalue = "0" + SEPARATOR + "0" + SEPARATOR + "0";
             }
 
-            string filename = Path.Combine(dir, username + ".txt");
+            string filename = Path.Combine(dir, username + ".csv");
             StreamWriter file = null;
 
             if (!File.Exists(filename))
@@ -223,7 +223,7 @@ namespace ManageLog
                 modelDiffvalue = "0" + SEPARATOR + "0" + SEPARATOR + "0";
             }
 
-            string filename = Path.Combine(dir, username + ".txt");
+            string filename = Path.Combine(dir, username + ".csv");
             StreamWriter file = null;
 
             if (!File.Exists(filename))
@@ -280,7 +280,7 @@ namespace ManageLog
         /// <param name="numEx">Number exercice</param>
         public void createConfigFile(int numEx)
         {
-            string filename = Path.Combine(PlayerPrefs.GetString(Utils.PREFS_EXPERIMENT_PATH_FOLDER), FilesConst.FILENAME_CONFIG_EXERCICE + ".txt");
+            string filename = Path.Combine(PlayerPrefs.GetString(Utils.PREFS_EXPERIMENT_PATH_FOLDER), FilesConst.FILENAME_CONFIG_EXERCICE + ".csv");
             Debug.Log("filename = " + filename);
 
             string doors = PlayerPrefs.GetString(Utils.PREFS_DOORS);
