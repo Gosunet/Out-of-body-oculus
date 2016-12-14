@@ -170,7 +170,7 @@ public class AvatarController : MonoBehaviour
 			bodyRoot.localRotation = Quaternion.identity;
 		}
 
-        initialPosition.y = 7;
+        //initialPosition.y += 7;
 
         // Restore the offset's position and rotation
         if (offsetNode != null)
@@ -281,7 +281,7 @@ public class AvatarController : MonoBehaviour
 			offsetCalibrated = true;
 			
 			xOffset = !mirroredMovement ? trans.x * moveRate : -trans.x * moveRate;
-			yOffset = trans.y * moveRate;
+			yOffset = trans.y * moveRate - 1;
 			zOffset = -trans.z * moveRate;
 
 //			if(verticalMovement)
@@ -296,8 +296,6 @@ public class AvatarController : MonoBehaviour
 				float yRelToAvatar = (offsetNode != null ? offsetNode.transform.position.y : transform.position.y) - cameraPos.y;
 				Vector3 relativePos = new Vector3(trans.x * moveRate, yRelToAvatar, trans.z * moveRate);
 				Vector3 offsetPos = cameraPos + relativePos;
-
-                offsetPos.y = 7;
 
                 if (offsetNode != null)
 				{
